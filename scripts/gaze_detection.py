@@ -26,7 +26,7 @@ from l2cs import Pipeline, render
 
 # INPUTS
 video_path = "data/raw/video_example_peter.mp4"
-output_video_path = "outputs/new_gaze_output.mp4"
+output_video_path = "outputs/annotated_gaze_output.mp4"
 model_weights = Path("models/L2CSNet_gaze360.pkl")
 
 # CONFIG 
