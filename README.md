@@ -73,7 +73,21 @@ poetry run python scripts/object_detection.py
 - Percentage looking at baby
 - Looking intervals
 ```
-Note: The printable metrics are copied to a gaze_metrics.txt file in the outputs/ directory along with the gaze plot. The annotated video is present in the private link - 
+Note: The printable metrics are copied to a gaze_metrics.txt file in the outputs/ directory along with the gaze plot. The annotated video is present in the private link - https://1drv.ms/f/c/4640ea4c5aca3f14/EppJpf1CBd9DnEo6e_QXU7kBKHiz03tBW5KJFGgn72K54A
+
+## Challenges
+- In the video, faces are partially visible in some frames. This was a challenge for the gaze detection model
+- Generalization is hard i.e pretrained models (like L2CSNet or YOLO) are trained on normal camera views or general-purpose datasets, not egocentric views of children.
+- Just using L2CSNet for gaze detection does not perform well. 
+- Gaze estimation models expect clean, front crops, but YOLO bounding boxes often vary in size and quality. Hence, a combination of YOLO and L2CSNet needs more time and effort. 
+- Handling frames with no detections required special care to prevent crashes
+
+## Considerations:
+- Detecting gaze is only part of the vision (speech and gestures can be incorporated in the future)
+- To add more preprocessing steps to improve the quality of the video 
+- Design own custom models 
+- To try lightweight head-mounted cameras to study the gaze of the child
+- To collect more egocentric data and label it for better generalization of the models. Also consider different environments. 
 
 ## Author
 - *Anish Navalgund*

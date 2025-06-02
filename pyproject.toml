@@ -17,9 +17,11 @@ dependencies = [
     "omegaconf >=2.3.0,<3.0.0",
     "torch >=2.0.0",
     "torchvision >=0.15.0",
-    "torchaudio >=2.0.0",
-    { git = "https://github.com/edavalosanaya/L2CS-Net.git", branch = "main" }
+    "torchaudio >=2.0.0"
 ]
+
+[tool.poetry.dependencies]
+L2CS-Net = { git = "https://github.com/edavalosanaya/L2CS-Net.git", branch = "main" }
 
 [tool.poetry.group.dev.dependencies]
 jupyter = "^1.1.1"
