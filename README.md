@@ -6,10 +6,12 @@ The project aims to quantify social interactions of young children based on ches
 
 Due to time constraint, Gaze estimation feature is implemented along with other initial video analysis features. (eg: real-time object and face detection)
 
-### Features: 
-- Gaze estimation feature helps detect when another person is looking at the child (face-to-face joint attention), for how long, and how often.
+#### Features:
 
-### Computer Vision Models used: 
+Gaze estimation feature helps detect when another person is looking at the child (face-to-face joint attention), for how long, and how often.
+
+#### Computer Vision Models used: 
+
 - L2CS-Net (gaze360)
 - YOLOv11m-face
 - YOLOv11l
@@ -36,16 +38,16 @@ social-interactions-analysis/
 
 ## Model Weights
 Please download the weights from the following links and place them in the `models/` directory:
+- L2CS-NET: https://drive.google.com/file/d/18S956r4jnHtSeT8z8t3z8AoJZjVnNqPJ/view?usp=drive_link
 - YOLOv11: https://docs.ultralytics.com/models/yolo11/#performance-metrics:~:text=68.0-,YOLO11l,-640
 - YOLOv11-face: https://github.com/akanametov/yolo-face#:~:text=yolov11s%2Dface.pt-,yolov11m%2Dface.pt,-yolov11l%2Dface.pt
-- L2CS-NET: https://drive.google.com/file/d/18S956r4jnHtSeT8z8t3z8AoJZjVnNqPJ/view?usp=drive_link
 
 ## Usage
 1. Clone the repository
 ```bash	
 git clone https://github.com/anishknavalgund/social-interactions-analysis.git
 ```
-2. Install the dependencies
+2. Install the dependencies. Recommended Python version: 3.10.x
 ```bash
 poetry install
 ```
@@ -67,7 +69,7 @@ poetry run python scripts/object_detection.py
 2. Gaze timeline plot: outputs/gaze_plot.png
 3. Printable metrics when gaze detection is run: 
 ```bash
-- Total joint attention time
+- Total joint attention duration
 - Percentage looking at baby
 - Looking intervals
 ```

@@ -157,4 +157,6 @@ ax.set_yticks([])
 ax.set_xlabel("Time (seconds)")
 ax.set_title("Gaze Timeline: Green spikes = person looking at baby")
 plt.tight_layout()
-plt.show()
+plt.savefig("outputs/gaze_plot.png")
+
+

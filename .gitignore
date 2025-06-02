@@ -1,6 +1,7 @@
 .venv/
 data/
-outputs/
+outputs/faces/
+outputs/annotated_gaze_output.mp4
 models/
 archieved_scripts/
 scripts/__pycache__/
