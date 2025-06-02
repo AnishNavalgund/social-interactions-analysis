@@ -1,0 +1,37 @@
+[project]
+name = "social-interactions-analysis"
+version = "0.1.0"
+description = ""
+authors = [
+    { name = "AnishNavalgund", email = "anishk.navalgund@gmail.com" }
+]
+readme = "README.md"
+requires-python = ">=3.10,<3.11"
+
+dependencies = [
+    "opencv-python >=4.11.0.86,<5.0.0.0",
+    "ultralytics >=8.3.146,<9.0.0",
+    "numpy >=1.23.5,<2.0.0",                    
+    "matplotlib >=3.6.3,<4.0.0",
+    "tqdm >=4.67.1,<5.0.0",
+    "omegaconf >=2.3.0,<3.0.0",
+    "torch >=2.0.0",
+    "torchvision >=0.15.0",
+    "torchaudio >=2.0.0",
+    { git = "https://github.com/edavalosanaya/L2CS-Net.git", branch = "main" }
+]
+
+[tool.poetry.group.dev.dependencies]
+jupyter = "^1.1.1"
+notebook = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# PyTorch CUDA configuration
+[[tool.poetry.source]]
+name = "pytorch-cu121"
+url = "https://download.pytorch.org/whl/cu121"
+priority = "explicit"
+
